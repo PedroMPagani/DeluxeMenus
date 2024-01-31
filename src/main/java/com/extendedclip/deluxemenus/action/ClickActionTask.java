@@ -83,7 +83,7 @@ public class ClickActionTask extends BukkitRunnable {
         break;
 
       case CONSOLE:
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), executable);
+        plugin.getUniversalScheduler().runTask(() -> Bukkit.dispatchCommand(Bukkit.getConsoleSender(), executable));
         break;
 
       case MINI_MESSAGE:

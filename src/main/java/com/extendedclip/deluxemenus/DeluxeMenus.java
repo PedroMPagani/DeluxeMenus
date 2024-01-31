@@ -214,6 +214,15 @@ public class DeluxeMenus extends JavaPlugin {
     if (Bukkit.getPluginManager().isPluginEnabled("MMOItems")) {
       itemHooks.put("mmoitems", new MMOItemsHook());
     }
+
+    if (Bukkit.getPluginManager().isPluginEnabled("ExecutableItems")) {
+      itemHooks.put("executableitems", new ExecutableItemsHook());
+    }
+
+    if (Bukkit.getPluginManager().isPluginEnabled("ExecutableBlocks")) {
+      itemHooks.put("executableblocks", new ExecutableBlocksHook());
+    }
+
   }
 
   public Optional<ItemHook> getItemHook(String id) {
